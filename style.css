@@ -33,6 +33,16 @@ body {
     color: #fff;
 }
 
+/* ===== SCROLL CHIZIQNI YASHIRISH ===== */
+html {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
 /* ===== NOISE TEXTURE + NUSXA BLOKLASH ===== */
 body::after {
     content: '';
@@ -1460,11 +1470,19 @@ textarea,
     }
 
     .featured-image {
-        min-height: 300px;
+        min-height: 280px;
     }
 
     .featured-content {
-        padding: 36px;
+        padding: 32px 24px;
+    }
+
+    .featured-content h3 {
+        font-size: 28px;
+    }
+
+    .featured-features {
+        grid-template-columns: 1fr 1fr;
     }
 
     .about-grid {
@@ -1477,11 +1495,11 @@ textarea,
     .section,
     .skills-inner,
     .contact-inner {
-        padding: 80px 20px;
+        padding: 80px 16px;
     }
 
     .section-header {
-        margin-bottom: 48px;
+        margin-bottom: 40px;
     }
 
     .about-grid {
@@ -1492,9 +1510,8 @@ textarea,
         grid-template-columns: 1fr;
     }
 
-    /* Featured loyihalar orasi */
-    .featured-project+.featured-project {
-        margin-top: 20px;
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .nav-links {
@@ -1506,9 +1523,84 @@ textarea,
     }
 
     .navbar {
-        padding: 0 20px;
+        padding: 0 16px;
     }
 
+    /* ===== FEATURED PROJECTS — TELEFON ===== */
+    .featured-project+.featured-project {
+        margin-top: 16px;
+    }
+
+    .featured-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        min-height: 220px;
+        max-height: 260px;
+    }
+
+    .featured-content {
+        padding: 24px 18px;
+    }
+
+    .featured-label {
+        font-size: 10px;
+        margin-bottom: 14px;
+        gap: 8px;
+    }
+
+    .featured-content h3 {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .featured-content>p {
+        font-size: 13px;
+        margin-bottom: 20px;
+        line-height: 1.7;
+    }
+
+    .featured-features {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .feature-item {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .feature-item .iconify {
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    .featured-tech {
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+
+    .featured-tech span {
+        font-size: 10px;
+        padding: 4px 10px;
+    }
+
+    .featured-cta {
+        font-size: 11px;
+    }
+
+    .featured-image-badge {
+        top: 12px;
+        left: 12px;
+        padding: 5px 12px;
+        font-size: 9px;
+        gap: 6px;
+        border-radius: 6px;
+    }
+
+    /* ===== STATS ===== */
     .stats-row {
         gap: 0;
         flex-wrap: wrap;
@@ -1531,25 +1623,20 @@ textarea,
         font-size: 32px;
     }
 
+    /* ===== FOOTER ===== */
     .footer {
         flex-direction: column;
         gap: 10px;
         text-align: center;
-        padding: 24px 20px;
+        padding: 24px 16px;
     }
 
-    .featured-features {
-        grid-template-columns: 1fr;
-    }
-
-    .featured-content h3 {
-        font-size: 28px;
-    }
-
+    /* ===== CONTACT ===== */
     .contact-container {
-        padding: 64px 24px;
+        padding: 56px 20px;
     }
 
+    /* ===== ABOUT ===== */
     .about-image-main {
         height: 400px;
     }
@@ -1585,5 +1672,27 @@ textarea,
     .btn-outline {
         width: 100%;
         justify-content: center;
+    }
+
+    .featured-image {
+        min-height: 180px;
+        max-height: 220px;
+    }
+
+    .featured-content {
+        padding: 20px 14px;
+    }
+
+    .featured-content h3 {
+        font-size: 20px;
+    }
+
+    .featured-features {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-tech span {
+        font-size: 9px;
+        padding: 3px 8px;
     }
 }
